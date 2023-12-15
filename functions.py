@@ -36,9 +36,6 @@ def brands():
         "www.ikea.com",
         "www.darty.com",
         "boulanger.com",
-        # TODO: remove this line when the app is ready
-        "tomandco.com",
-        "animalis.com",
     ]
 
 
