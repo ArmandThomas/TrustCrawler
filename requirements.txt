@@ -1,0 +1,5 @@
+streamlit
+sqlalchemy==1.4.0
+scrapy
+openai==0.28.0
+pandas
