@@ -1,7 +1,11 @@
 # Welcome To TrustCrawler
 
-The url scraped is : f"https://fr.trustpilot.com/review/{brand}?languages=all" with brand in parameters
-Z
+## Demo
+
+https://trustcrawler.streamlit.app/
+
+The url scraped is : https://fr.trustpilot.com/review/{brand}?languages=all with brand in parameters
+
 ## Important if you run in local make sure to secret api key in .streamlit/secrets.toml
 
 ### To run the project:
