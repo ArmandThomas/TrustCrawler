@@ -67,8 +67,8 @@ def translate_rows(df, table_name):
     for index, row in df.iterrows():
         try:
             new_data = openai_translate(row["title"], row["review"])
-            title = new_data.get('title', row['title'])
-            review = new_data.get('content', row['review'])
+            title = new_data.get('title', row['title']) if new_data.get('title', row['title']) != '' else row['title']
+            review = new_data.get('content', row['review']) if new_data.get('content', row['review']) != '' else row['review']
             df.loc[index, "title"] = title
             df.loc[index, "review"] = review
             db.update_row_by_id(table_name, row["id_review"], title=title, review=review)
