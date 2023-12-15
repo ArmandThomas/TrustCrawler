@@ -11,8 +11,6 @@ st.title("Extract reviews")
 with st.sidebar:
     sidebar()
 
-
-
 is_scraped = False
 brand_scraped = []
 
@@ -24,6 +22,9 @@ selected_brands = st.multiselect(
 )
 
 if st.button(label='Get reviews') and selected_brands != []:
+
+    is_scraped = False
+    brand_scraped = []
 
     for brand in selected_brands:
         with st.status(f"Scraping {brand}", expanded=True) as status:
